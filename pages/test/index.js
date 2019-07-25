@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Index = () => (
+const Index = (props) => (
   <div>
-    <p>Hello Next.js</p>
+    <p>{props.stars}</p>
   </div>
 );
 
@@ -10,6 +10,6 @@ const Index = () => (
 Index.getInitialProps = async ({ req }) => {
   const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
   console.log("getinitprops", ip)
-  return { stars: "asdf" };
+  return { stars: ip };
 };
 export default Index;

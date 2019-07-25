@@ -187,7 +187,7 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/home/bryanandreasnday/Public/prbation/next9res/pages/test/index.js";
 
 
-var Index = function Index() {
+var Index = function Index(props) {
   return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     __source: {
       fileName: _jsxFileName,
@@ -200,7 +200,7 @@ var Index = function Index() {
       lineNumber: 5
     },
     __self: this
-  }, "Hello Next.js"));
+  }, props.stars));
 };
 
 Index.getInitialProps =
@@ -218,7 +218,7 @@ function () {
             ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
             console.log("getinitprops", ip);
             return _context.abrupt("return", {
-              stars: "asdf"
+              stars: ip
             });
 
           case 4:
